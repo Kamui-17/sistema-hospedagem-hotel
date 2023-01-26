@@ -6,3 +6,5 @@ No desafio foi solicitado a construção de um sistema que será usado para real
 
 * Não deve ser possível realizar uma reserva quando a capacidade da suíte for menor do que a quantidade de hóspedes. Exemplo: Se é uma suíte capaz de hospedar 2 pessoas, ao tentar passar 3, deverá retornar uma exception.
 * O método ObterQuantidadeHospedes da classe Reserva deverá retornar a quantidade total de hóspedes, enquanto que o método CalcularValorDiaria deverá retornar o valor da diária (Dias reservados x valor da diária).
+
+<sub>O código do projeto foi primeiramente disponibilizado de forma incompleta com o intuito de que o seu restante fosse concluído com os ensinamentos já adquiridos pelo aluno.</sub>
