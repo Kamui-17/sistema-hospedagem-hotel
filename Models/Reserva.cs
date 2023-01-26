@@ -15,17 +15,25 @@ namespace DesafioProjetoHospedagem.Models
 
         public void CadastrarHospedes(List<Pessoa> hospedes)
         {
-            // TODO: Verificar se a capacidade é maior ou igual ao número de hóspedes sendo recebido
-            // *IMPLEMENTE AQUI*
-            if (true)
+            int quantidade_hospedes = hospedes.Count;
+            
+            Console.WriteLine(quantidade_hospedes);
+            
+            if (Suite.Capacidade>=quantidade_hospedes)
             {
+                Console.WriteLine("A reserva pode ser realizada, número de hóspedes não excede o tamanho da suíte.");
                 Hospedes = hospedes;
             }
             else
-            {
-                // TODO: Retornar uma exception caso a capacidade seja menor que o número de hóspedes recebido
-                // *IMPLEMENTE AQUI*
+            {   
+                
+                 Console.WriteLine("Impossível realizar a reserva, número de hóspedes é superior ao tamanho da suíte.");
+                 //catch(Exception ex){
+                //Console.WriteLine($"Ocorreu uma exceção genérica.{ex.Message}");    
+                //}
+
             }
+            
         }
 
         public void CadastrarSuite(Suite suite)
@@ -35,23 +43,16 @@ namespace DesafioProjetoHospedagem.Models
 
         public int ObterQuantidadeHospedes()
         {
-            // TODO: Retorna a quantidade de hóspedes (propriedade Hospedes)
-            // *IMPLEMENTE AQUI*
-            return 0;
+            return Hospedes.Count;
         }
 
         public decimal CalcularValorDiaria()
         {
-            // TODO: Retorna o valor da diária
-            // Cálculo: DiasReservados X Suite.ValorDiaria
-            // *IMPLEMENTE AQUI*
-            decimal valor = 0;
+            decimal valor = DiasReservados*Suite.ValorDiaria;
 
-            // Regra: Caso os dias reservados forem maior ou igual a 10, conceder um desconto de 10%
-            // *IMPLEMENTE AQUI*
-            if (true)
+            if (DiasReservados>=10)
             {
-                valor = 0;
+                valor = valor*90/100;
             }
 
             return valor;
